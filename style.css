@@ -1,0 +1,39 @@
+* {
+  font-weight: normal;
+  list-style: none;
+  display: block;
+  font-size: 30px;
+  font-family: 'Varela Round', sans-serif;
+}
+title {
+  font-size:100px;
+  font-family:'Varela Round', bold;
+  text-align: center;
+
+}
+body {
+  background-color: #9DEEEF;
+}
+
+.page_elements {
+  text-align: center;
+}
+
+.results {
+  text-align: left;
+}
+
+.question {
+  font-family: 'Macondo', cursive;
+  font-family: 'Merriweather', serif;
+  color:darkblue;
+  font-size: 50px;
+}
+
+.answer {
+  font-size: 75px;
+  text-align: center;
+  font-family: 'Macondo', cursive;
+font-family: 'Merriweather', serif;
+font-family: 'Lobster', cursive;
+}
