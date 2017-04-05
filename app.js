@@ -74,8 +74,3 @@ if (question1.trim().toUpperCase() == 'YES' || bleh.trim()=== ) {
 } else {
   alert('nope I don\'t');
 }
-*/
-
-for  (;;) {
-
-}
