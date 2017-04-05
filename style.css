@@ -17,6 +17,23 @@ body {
   background-color: #9DEEEF;
 }
 
+h2 {
+  font-weight: normal;
+  list-style: none;
+  display: block;
+  font-size: 80px;
+  font-family: 'Varela Round', sans-serif;
+  margin-top:-30px;
+}
+
+.lobstertitle {
+  font-family: 'Lobster', cursive;
+  text-align:center;
+  font-size: 50px;
+
+}
+
+
 .page_elements {
   text-align: center;
 }
@@ -50,14 +67,6 @@ font-family: 'Lobster', cursive;
 
 }
 
-h2 {
-  font-weight: normal;
-  list-style: none;
-  display: block;
-  font-size: 80px;
-  font-family: 'Varela Round', sans-serif;
-  margin-top:-30px;
-}
 
 .education {
   font-family: 'Macondo', bold;
