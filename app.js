@@ -1,5 +1,5 @@
 'use strict';
-correct= 0;
+var correct= 0;
 console.log('suh dude');
 var question1 = 'do you think i like basketball?';
 var question2 = 'do you think soccer is my favorite sport??';
@@ -104,20 +104,24 @@ notDone=false;
 }
 
 //Question 7
-var notFinished=true;
+
 var states= ['Washington','Oregon','Idaho','California','Hawaii','South Carolina'];
 
+alert('Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?');
 
-for (var i= 7; i>0 && notFinished; i--) {
-  var correct=0;
-  var question7= prompt('Last Question! Which States have I been to in the United States?');
+for (var i= 7; i>0; i--) {
+  var correctstate=0;
+  var question7= prompt('Which State??!!?');
   for (var j=0; j<states.length; j++) {
     if (question7===states[j]) {
-      correct+=1;
+      correctstate++;
       alert('yay your right!');
     }
   }
 }
+document.getElementById("question7").innerHTML='Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?';
+
+document.getElementById("answer7").innerHTML="You got  "+correctstate+" out of seven attempts! Not too bad";
 
 //
 // var answer6= prompt('Last Question! Which States have I been to in the United States?');
