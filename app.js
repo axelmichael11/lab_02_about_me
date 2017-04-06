@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 var correct= 0;
 console.log('suh dude');
 var question1 = 'do you think i like basketball?';
@@ -105,12 +105,14 @@ notDone=false;
 }
 
 //Question 7
-*/
+
 var states= ['Washington','Oregon','Idaho','California','Hawaii','South Carolina','CA','OR','ID','HI','SC'];
 
 alert('Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?');
 var notFinished= true;
 var correctstate=1;
+
+
 for (var i= 7; i>0 && notFinished; i--) {
   var question7= prompt('Which State??!!?');
   for (var j=0; j<states.length; j++) {
