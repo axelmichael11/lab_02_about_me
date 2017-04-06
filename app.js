@@ -1,5 +1,5 @@
 'use strict';
-
+correct= 0;
 console.log('suh dude');
 var question1 = 'do you think i like basketball?';
 var question2 = 'do you think soccer is my favorite sport??';
@@ -16,7 +16,6 @@ var answer2= prompt(question2);
 var answer3= prompt(question3);
 var answer4= prompt(question4);
 var answer5= prompt(question5);
-var answer6= prompt(question6);
 
 
 document.getElementById("question1").innerHTML = question1;
@@ -29,6 +28,7 @@ document.getElementById("question6").innerHTML = question6;
 if (answer1.trim().toUpperCase()== 'YES' || answer1.trim()=='y' ) {
   document.getElementById("answer1").innerHTML = right;
   console.log(right+' I love lobster font');
+  correct++;
 } else {
   document.getElementById("answer1").innerHTML = wrong;
   console.log(wrong);
@@ -38,6 +38,7 @@ if (answer1.trim().toUpperCase()== 'YES' || answer1.trim()=='y' ) {
 if (answer2.trim().toUpperCase()== 'YES' || answer2.trim()=='y' ) {
   document.getElementById("answer2").innerHTML = right;
   console.log(right+' I love lobster font');
+  correct+=0;
 } else {
   document.getElementById("answer2").innerHTML = wrong;
   console.log(wrong);
@@ -47,6 +48,7 @@ if (answer2.trim().toUpperCase()== 'YES' || answer2.trim()=='y' ) {
 if (answer3.trim().toUpperCase()== 'NO' || answer3.trim()=='n' ) {
   document.getElementById("answer3").innerHTML = right;
   console.log(right+' I love lobster font');
+  correct+=0;
 } else {
   document.getElementById("answer3").innerHTML = wrong;
   console.log(wrong);
@@ -56,6 +58,7 @@ if (answer3.trim().toUpperCase()== 'NO' || answer3.trim()=='n' ) {
 if (answer4.trim().toUpperCase()== 'NO' || answer4.trim()=='n' ) {
   document.getElementById("answer4").innerHTML = right;
   console.log(right+' I love lobster font');
+  correct+=0;
 } else {
   document.getElementById("answer4").innerHTML = wrong;
   console.log(wrong);
@@ -65,38 +68,63 @@ if (answer4.trim().toUpperCase()== 'NO' || answer4.trim()=='n' ) {
 if (answer5.trim().toUpperCase()== 'YES' || answer5.trim()=='y' ) {
   document.getElementById("answer5").innerHTML = right+" yes of course AHHHHH";
   console.log(right+' I love lobster font');
+  correct+=0;
 } else {
   document.getElementById("answer5").innerHTML = wrong;
   console.log(wrong);
 }
 
 //Question 6
+alert('SOOO what do you think is my favorite number?!? I will give you four tries to get the right answer!!!!')
+var question6= 'SOOO what do you think is my favorite number?!?'
+
 var notDone=true;
 var favNumber=25;
-var toohigh= 'Sorry but your number is too high!!! Try again!'
-var toolow= 'Sorry but your number is too low!!! Try again!'
-var noguesses= 'you are out of guesses! Too badd'
+
+
 
 
 for (var guess = 5; guess > 0 && notDone; guess--) {
-answer6;
+var favNumber=25;
+var answer6= prompt(question6);
 if (answer6 == favNumber) {
 document.getElementById("answer6").innerHTML = right+" yes of course AHHHHH";
 alert('congrats! You guessed correctly');
 notDone=false;
 } else if (answer6>favNumber) {
-  alert(toohigh);
   guess-=1;
-  prompt('Guess Again!');
-  console.log(guess);
+  prompt('Too High! Guess Again!');
 } else if (answer6< favNumber){
-  alert(toolow);
   guess-=1;
-  prompt('Guess Again!');
-  console.log(guess);
-} else {
+  prompt('Too Low! Guess Again!');
+} else if (guess===0) {
   alert('Out of guesses!!');
-  document.getElementById("answer5").innerHTML = right+" yes of course AHHHHH";
-  console.log(guess);
+  document.getElementById("answer6").innerHTML = wrong+" yes of course AHHHHH";
 }
 }
+
+//Question 7
+var notFinished=true;
+var states= ['Washington','Oregon','Idaho','California','Hawaii','South Carolina'];
+
+
+for (var i= 7; i>0 && notFinished; i--) {
+  var correct=0;
+  var question7= prompt('Last Question! Which States have I been to in the United States?');
+  for (var j=0; j<states.length; j++) {
+    if (question7===states[j]) {
+      correct+=1;
+      alert('yay your right!');
+    }
+  }
+}
+
+//
+// var answer6= prompt('Last Question! Which States have I been to in the United States?');
+// var rightanswers= [];
+//
+// for (var i= 0; i<states.length; i++) {
+//   if (answer6===states[i] && correct) {
+//     rightanswers.push(states[i])
+//   }
+//
