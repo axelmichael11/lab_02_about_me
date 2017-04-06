@@ -1,4 +1,5 @@
 'use strict';
+/*
 var correct= 0;
 console.log('suh dude');
 var question1 = 'do you think i like basketball?';
@@ -104,24 +105,29 @@ notDone=false;
 }
 
 //Question 7
-
-var states= ['Washington','Oregon','Idaho','California','Hawaii','South Carolina'];
+*/
+var states= ['Washington','Oregon','Idaho','California','Hawaii','South Carolina','CA','OR','ID','HI','SC'];
 
 alert('Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?');
-
-for (var i= 7; i>0; i--) {
-  var correctstate=0;
+var notFinished= true;
+var correctstate=1;
+for (var i= 7; i>0 && notFinished; i--) {
   var question7= prompt('Which State??!!?');
   for (var j=0; j<states.length; j++) {
-    if (question7===states[j]) {
+    if (question7.trim().toUpperCase()===states[j].trim().toUpperCase()) { //how to switch up all the strings so they are equal.... with lower/upper case...
+
       correctstate++;
       alert('yay your right!');
+    } else {
+      alert('sorry thats not right...');
     }
   }
 }
 document.getElementById("question7").innerHTML='Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?';
 
 document.getElementById("answer7").innerHTML="You got  "+correctstate+" out of seven attempts! Not too bad";
+
+
 
 //
 // var answer6= prompt('Last Question! Which States have I been to in the United States?');
@@ -132,3 +138,5 @@ document.getElementById("answer7").innerHTML="You got  "+correctstate+" out of s
 //     rightanswers.push(states[i])
 //   }
 //
+
+if (correct> )
