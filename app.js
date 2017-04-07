@@ -26,6 +26,7 @@ document.getElementById("question4").innerHTML = question4;
 document.getElementById("question5").innerHTML = question5;
 document.getElementById("question6").innerHTML = question6;
 
+function questionOne() {
 if (answer1.trim().toUpperCase()== 'YES' || answer1.trim()=='y' ) {
   document.getElementById("answer1").innerHTML = right;
   console.log(right+' I love lobster font');
@@ -34,8 +35,9 @@ if (answer1.trim().toUpperCase()== 'YES' || answer1.trim()=='y' ) {
   document.getElementById("answer1").innerHTML = wrong;
   console.log(wrong);
 }
+}
 
-
+function questionTwo() {
 if (answer2.trim().toUpperCase()== 'YES' || answer2.trim()=='y' ) {
   document.getElementById("answer2").innerHTML = right;
   console.log(right+' I love lobster font');
@@ -44,8 +46,9 @@ if (answer2.trim().toUpperCase()== 'YES' || answer2.trim()=='y' ) {
   document.getElementById("answer2").innerHTML = wrong;
   console.log(wrong);
 }
+}
 
-
+function questionThree() {
 if (answer3.trim().toUpperCase()== 'NO' || answer3.trim()=='n' ) {
   document.getElementById("answer3").innerHTML = right;
   console.log(right+' I love lobster font');
@@ -54,8 +57,9 @@ if (answer3.trim().toUpperCase()== 'NO' || answer3.trim()=='n' ) {
   document.getElementById("answer3").innerHTML = wrong;
   console.log(wrong);
 }
+}
 
-
+function questionFour() {
 if (answer4.trim().toUpperCase()== 'NO' || answer4.trim()=='n' ) {
   document.getElementById("answer4").innerHTML = right;
   console.log(right+' I love lobster font');
@@ -64,8 +68,9 @@ if (answer4.trim().toUpperCase()== 'NO' || answer4.trim()=='n' ) {
   document.getElementById("answer4").innerHTML = wrong;
   console.log(wrong);
 }
+}
 
-
+function questionFive() {
 if (answer5.trim().toUpperCase()== 'YES' || answer5.trim()=='y' ) {
   document.getElementById("answer5").innerHTML = right+" yes of course AHHHHH";
   console.log(right+' I love lobster font');
@@ -74,10 +79,11 @@ if (answer5.trim().toUpperCase()== 'YES' || answer5.trim()=='y' ) {
   document.getElementById("answer5").innerHTML = wrong;
   console.log(wrong);
 }
+}
 
 //Question 6
-alert('SOOO what do you think is my favorite number?!? I will give you four tries to get the right answer!!!!')
-var question6= 'SOOO what do you think is my favorite number?!?'
+function questionSix() {
+alert('SOOO what do you think is my favorite number?!? I will give you four tries to get the right answer!!!!');
 
 var notDone=true;
 var favNumber=25;
@@ -85,52 +91,59 @@ var favNumber=25;
 
 
 
-for (var guess = 5; guess > 0 && notDone; guess--) {
-var favNumber=25;
+for (var guess = 4; guess > 0 || notDone; guess--) {
 var answer6= prompt(question6);
 if (answer6 == favNumber) {
 document.getElementById("answer6").innerHTML = right+" yes of course AHHHHH";
 alert('congrats! You guessed correctly');
 notDone=false;
-} else if (answer6>favNumber) {
-  guess-=1;
-  prompt('Too High! Guess Again!');
-} else if (answer6< favNumber){
-  guess-=1;
-  prompt('Too Low! Guess Again!');
-} else if (guess===0) {
+} else if (answer6 > favNumber) {
+  guess--;
+  alert('Too High! Guess Again!');
+} else if (answer6 < favNumber){
+  guess--;
+  alert('Too Low! Guess Again!');
+} else {
   alert('Out of guesses!!');
   document.getElementById("answer6").innerHTML = wrong+" yes of course AHHHHH";
 }
 }
+}
 
 //Question 7
+// 'Idaho','California','Hawaii','South Carolina','CA','OR','ID','HI','SC'
+// function questionSeven() {
+// var states= ['Washington','Oregon'];
+//
+// alert('Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?');
+// var notFinished= true;
+// var correctstate=1;
+//
+//
+// for (var i= 7; i>0 && notFinished; i--) {
+//   var question7 = prompt('Which State??!!?');
+//   for (var j=0; j<states.length; j++) {
+//     if (question7.trim().toUpperCase()===states[j].trim().toUpperCase()) { //how to switch up all the strings so they are equal.... with lower/upper case...
+//
+//       correctstate++;
+//       alert('yay your right!');
+//     } else if () {
+//       alert('sorry thats not right...');
+//     }
+//   }
+// }
+// }
+// document.getElementById("question7").innerHTML='Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?';
+//
+// document.getElementById("answer7").innerHTML="You got  "+correctstate+" out of seven attempts! Not too bad";
 
-var states= ['Washington','Oregon','Idaho','California','Hawaii','South Carolina','CA','OR','ID','HI','SC'];
-
-alert('Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?');
-var notFinished= true;
-var correctstate=1;
-
-
-for (var i= 7; i>0 && notFinished; i--) {
-  var question7= prompt('Which State??!!?');
-  for (var j=0; j<states.length; j++) {
-    if (question7.trim().toUpperCase()===states[j].trim().toUpperCase()) { //how to switch up all the strings so they are equal.... with lower/upper case...
-
-      correctstate++;
-      alert('yay your right!');
-    } else {
-      alert('sorry thats not right...');
-    }
-  }
-}
-document.getElementById("question7").innerHTML='Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?';
-
-document.getElementById("answer7").innerHTML="You got  "+correctstate+" out of seven attempts! Not too bad";
-
-
-
+questionOne();
+questionTwo();
+questionThree();
+questionFour();
+questionFive();
+questionSix();
+//questionSeven();
 //
 // var answer6= prompt('Last Question! Which States have I been to in the United States?');
 // var rightanswers= [];
@@ -141,4 +154,4 @@ document.getElementById("answer7").innerHTML="You got  "+correctstate+" out of s
 //   }
 //
 
-if (correct> )
+// if (correct> )
