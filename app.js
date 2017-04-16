@@ -1,8 +1,7 @@
 'use strict';
 
+var name =prompt('Welcome! I want to ask you some questions to see how well you know me! But First, what is your name???');
 var correct = 0;
-
-var correct= 0;
 console.log('suh dude');
 var question1 = 'do you think i like basketball?';
 var question2 = 'do you think soccer is my favorite sport??';
@@ -10,7 +9,7 @@ var question3 = 'do you think thai food is my favorite food??';
 var question4 = 'do you think my favorite color is blue??';
 var question5 = 'do you think I like writing JS?!???!?';
 var question6 = 'SOOO what do you think is my favorite number?!?';
-var question7 = 'What states have I been to??'
+var question7 = 'What states have I been to??';
 var right= 'you are right!!!!';
 var wrong= 'you are wrong....';
 
@@ -34,6 +33,7 @@ document.getElementById('question7').innerHTML = question7;
 if (answer1.trim().toUpperCase()   == 'YES' || answer1.trim() =='y' ) {
   document.getElementById('answer1').innerHTML = right;
   console.log(right+' I love lobster font');
+  correct++;
 } else {
   document.getElementById('answer1').innerHTML = wrong;
   console.log(wrong);
@@ -43,6 +43,7 @@ if (answer1.trim().toUpperCase()   == 'YES' || answer1.trim() =='y' ) {
 if (answer2.trim().toUpperCase() == 'YES' || answer2.trim() == 'y' ) {
   document.getElementById('answer2').innerHTML = right;
   console.log(right+' I love lobster font');
+  correct++;
 
 } else {
   document.getElementById('answer2').innerHTML = wrong;
@@ -53,7 +54,7 @@ if (answer2.trim().toUpperCase() == 'YES' || answer2.trim() == 'y' ) {
 if (answer3.trim().toUpperCase() == 'NO' || answer3.trim() == 'n' ) {
   document.getElementById('answer3').innerHTML = right;
   console.log(right+' I love lobster font');
-
+  correct++;
 } else {
   document.getElementById('answer3').innerHTML = wrong;
   console.log(wrong);
@@ -63,6 +64,7 @@ if (answer3.trim().toUpperCase() == 'NO' || answer3.trim() == 'n' ) {
 if (answer4.trim().toUpperCase() == 'NO' || answer4.trim() == 'n' ) {
   document.getElementById('answer4').innerHTML = right;
   console.log(right+' I love lobster font');
+  correct++;
 } else {
   document.getElementById('answer4').innerHTML = wrong;
   console.log(wrong);
@@ -72,6 +74,7 @@ if (answer4.trim().toUpperCase() == 'NO' || answer4.trim() == 'n' ) {
 if (answer5.trim().toUpperCase() == 'YES' || answer5.trim() == 'y' ) {
   document.getElementById('answer5').innerHTML = right + ' yes of course AHHHHH';
   console.log(right + ' I love lobster font');
+  correct++;
 } else {
   document.getElementById('answer5').innerHTML = wrong;
   console.log(wrong);
@@ -82,8 +85,6 @@ if (answer5.trim().toUpperCase() == 'YES' || answer5.trim() == 'y' ) {
 
 alert('SOOO what do you think is my favorite number?!? I will give you four tries to get the right answer!!!!');
 
-var right= 'you are right!!!!';
-var wrong= 'you are wrong....';
 
 var notDone = true;
 var favNumber = 25;
@@ -96,7 +97,7 @@ for (var i = 4; i > 0 && notDone; i--) {
     document.getElementById('answer6').innerHTML = right + ' yes of course AHHHHH';
     alert('congrats! You guessed correctly');
     notDone=false;
-    correct +=1;
+    correct++;
   } else if (answer6 > favNumber || i == 1) {
     alert('Too High!!!!!!');
     document.getElementById('answer6').innerHTML = wrong;
@@ -118,15 +119,25 @@ for (var I = 7; I > 0 && notFinished; I--) {
   var answer7 = prompt(question7);
   for (var j = 0; j < states.length; j++) {
     if (answer7.trim().toUpperCase() === states[j].trim().toUpperCase()) {
-      alert('yeah you got it!');
+      alert('yeah you got it! These were the possible answers... '+states);
       notFinished=false;
+      correct++;
       document.getElementById('answer7').innerHTML = right + ' yes of course AHHHHH';
     }
   }
   if (notFinished) {
     alert('nope! Guess again...');
   } else if (I === 1) {
-    alert('nope! Guess again...');
-    document.getElementById('answer6').innerHTML = wrong;
+    alert('You are out of guesses! These were the possible answers... '+states);
+    document.getElementById('answer7').innerHTML = wrong;
   }
+}
+console.log(correct);
+
+if (correct < 3) {
+  document.getElementById('finalscore').innerHTML =name+ ', You got '+correct+' out of 7 questions correct!'+' You really don\'t know me at all!';
+} else if (correct <= 5 && correct >= 3) {
+  document.getElementById('finalscore').innerHTML =name+ ', You got '+correct+' out of 7 questions correct!'+' You kind of know me...';
+} else if (correct > 5) {
+  document.getElementById('finalscore').innerHTML =name+ ', You got '+correct+' out of 7 questions correct!'+' You know me pretty well!';
 }
