@@ -125,6 +125,7 @@ for (var i= 7; i>0 && notFinished; i--) {
     }
   }
 }
+
 document.getElementById("question7").innerHTML='Last series of questions! I will give you seven attempts to answer! The question is, which states have I been to in the United States?!??!?';
 
 document.getElementById("answer7").innerHTML="You got  "+correctstate+" out of seven attempts! Not too bad";
@@ -139,6 +140,3 @@ document.getElementById("answer7").innerHTML="You got  "+correctstate+" out of s
 //   if (answer6===states[i] && correct) {
 //     rightanswers.push(states[i])
 //   }
-//
-
-if (correct> )
